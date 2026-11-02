@@ -7,43 +7,52 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header class="header"></header>
-        <h1>Winter ski destinations</h1>   
+    <header class="header"></header> 
         <nav class="nav">
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Destinations</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#destination">Destinations</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
-        <section id="home" class="hero-image">
-            <div class="hero-text"></div>
+        <section id="home" class="hero">
+            <div class="hero-text">Sweden ski destinations</div>
+            <button id="togglebtn">Change the color</button>
         </section>
 
         <section class="content">
-            <h2>Top Ski Destinations in Sweden</h2>
-            <p>Discover the best ski resorts in Sweden</p>
-            <ul>
-                <li>Ramunberget, Jämtland</li>
-                <li>Hemavan, Västerbotten</li>
-                <li>Åre, Jämtland</li>
-                <li>Vemdalen, Jämtland</li>
-                <li>Idre, Jämtland</li>
-            </ul>
+            <h2 id="destination">Top Ski Destinations in Sweden</h2>
+            <p>Discover the best ski resorts in Sweden</p><br>
 
-        <div id="user_form">
-            <h2>Send your ski recommendations till us</h2>
-            <form action="submit_form" method="post">
+            <article id="List">
+                <p>Ramunberget, Jämtland</p><br>
+                <a href="https://www.ramundberget.se/sv">More info</a><br>   
+                <p>Hemavan, Västerbotten</p><br>
+                <a href="https://hemavan.nu/">More info</a><br>
+                <p>Åre, Jämtland</p><br>
+                <a href="https://www.skistar.com/sv/vara-skidorter/are/vinter-i-are/">More info</a><br>
+                <p>Vemdalen, Jämtland</p><br>
+                <a href="https://www.skistar.com/sv/vara-skidorter/vemdalen/vinter-i-vemdalen/">More info</a><br>
+                <p>Idre, Jämtland</p><br>
+                <a href="https://www.idrefjall.se/skidakning-pa-idre-fjall/">More info</a><br>
+            </article>
+
+        <button class="formBtn">Contact form</button>    
+        <div id="user_form" hidden>   
+            <form id="formInfo" action="submit_form" method="post">
+                <h2>Send us your ski recommendation</h2>
                 <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required><br><br>
+                <input type="text" id="name" name="name" required><br>
                 <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required><br><br>
-                <input type="submit" value="Submit">
+                <input type="email" id="email" name="email" placeholder="@" requeried><br>
+                <label for="text">Message:</label>
+                <textarea id="message" rows="4" cols="30" name="info" requeried></textarea><br>
+                <button class="add-btn">Submit</button>
             </form>
         </div>
 
         <footer>
-        <p>info at skidestionation.se</p>
+        <p id="contact">info at skidestionation.se</p>
         <p>070-123 456 78</p><br>
         </footer>
 </body>

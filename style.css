@@ -2,3 +2,134 @@
     box-sizing: border-box;
     margin: 0;
 }
+body {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+:root {
+    --bg-color: #A4ACDC;
+    --head-foot: #8490B4;   
+    --form-color: #989CC4;
+    --content-color: #ACBCDC;
+    --text-color: #15151c;
+    --btn-color: #E8EFF7;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--text-color);
+    background-color: var(--head-foot);
+    border: solid var(--head-foot) 1rem;
+}
+
+.nav li{
+    display: flex;
+    text-decoration: none;
+    justify-content: flex-end;
+    align-items: center;
+    color: var(--text-color);
+    background-color: var(--head-foot);
+}
+ul{
+    display: flex;
+    text-decoration: none;
+    justify-content: flex-end;
+    background-color: var(--head-foot);
+    gap: 15px;
+}
+.nav a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+.hero {
+    background-color: var(--bg-color);
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.hero.active {
+    background-color: #C3D4F6;
+}
+.hero-text {
+    text-align: center;
+    font-size: 4rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--text-color);
+}
+#togglebtn {
+    text-align: center;
+    border: none;
+    border-radius: 15px;
+    font-size: 1rem;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    color: var(--text-color);
+    background-color: var(--btn-color);
+}
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+    background-color: var(--content-color);
+    font-size: 1.5rem;
+    color: var(--text-color);
+}
+
+.formBtn {
+    margin: 25px;
+    border: none;
+    align-self: center;
+    border-radius: 15px;
+    font-size: 1rem;
+    cursor:pointer;
+    color: var(--text-color);
+    background-color: var(--btn-color);
+}
+#user_form.active {
+    display: flex;
+    flex-direction: column;
+}
+
+.hidden {
+    display: none;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--form-color);
+    font-size: 1rem;
+    color: var(--text-color);
+    padding: 1rem; 
+}
+.add-btn {
+    margin: 25px;
+    border: none;
+    align-self: center;
+    border-radius: 15px;
+    font-size: 1rem;
+    cursor:pointer;
+    color: var(--text-color);
+    background-color: var(--btn-color);
+}
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    gap: 0.5rem;
+    background-color: var(--head-foot);
+    font-size: 1rem;
+    color: var(--text-color);
+    padding: 2rem;
+}
